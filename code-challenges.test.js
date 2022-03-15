@@ -20,18 +20,53 @@ const colors1 = ["purple", "blue", "green", "yellow", "pink"]
 const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
 // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
 
+// a describe method that lists the name of the function OR naming of the particular test.
+describe(noPurpleNoChartreuse, () => {
+
+    it("takes in a array and returns a array with no purple or chartreuse", () => {
+      expect(noPurpleNoChartreuse(colors1)).toEqual(["yellow", "blue", "pink", "green"])
+      expect(noPurpleNoChartreuse(colors2)).toEqual(["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
+    })
+  })
 
 // b) Create the function that makes the test pass.
 
+// filter(function noPurpleNoChartreuse(element){/*"purple", "chartreuse"*/})
+
+function noPurpleNoChartreuse(l) {
+    let newArr = [];
+    for(let i = 0;i<l.length;i++){
+      if(typeof l[i] !== 'purple', 'chartreuse') newArr.push(l[i]);
+    }
+    return newArr
+  }
 
 // --------------------2) Create a function that takes an array of numbers and returns an array of the minimum and maximum numbers in that order.
 
 // a) Create a test with expect statements for each of the variables provided.
 
+describe(minMax, () => {
+
+    it("takes an array of numbers and returns an array of the minimum and maximum numbers in that order.", () => {
+      expect(minMax(nums1)).toEqual([-8, 90])
+      expect(minMax(nums2)).toEqual([5, 109])
+    })
+  })
+
 const nums1 = [3, 56, 90, -8, 0, 23, 6]
 // Expected output: [-8, 90]
 const nums2 = [109, 5, 9, 67, 8, 24]
 // Expected output: [5, 109]
+
+// describe(minMaxArray, () => {
+
+//     it("takes an array of numbers and returns an array of the minimum and maximum numbers in that order", () => {
+//       expect(minMaxArray(nums1)).toEqual([-8, 90])
+//       expect(minMaxArray(nums2)).toEqual([5, 109])
+//     })
+//   })
+
+
 
 
 // b) Create the function that makes the test pass.
@@ -45,5 +80,22 @@ const testArray1 = [3, 7, 10, 5, 4, 3, 3]
 const testArray2 = [7, 8, 2, 3, 1, 5, 4]
 // Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
 
+describe(oneNoDups, () => {
+
+    it("takes in two arrays as arguments and returns one array with no duplicate values.", () => {
+      expect(oneNoDups(testArray1, testArray2)).toEqual([3, 7, 10, 5, 4, 8, 2, 1])
+      
+    })
+  })
+
 
 // b) Create the function that makes the test pass.
+
+
+// describe(noDoublesArray, () => {
+
+//     it("takes in two arrays as arguments and returns one array with no duplicate values", () => {
+//       expect(noDoublesArray(testArray1, testArray2)).toEqual([3, 7, 10, 5, 4, 8, 2, 1])
+    
+//     })
+//   })
