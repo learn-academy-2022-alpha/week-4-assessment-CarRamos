@@ -17,7 +17,7 @@ When data is passed from one component to another in react they use whats called
 
   Your answer: Display object management 
 
-  Researched answer: Document Object Model
+  Researched answer: DOM events is javascript that is executed when a event happens. Its a connection with the HTML code
 
 
 

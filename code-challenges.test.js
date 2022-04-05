@@ -25,13 +25,18 @@ describe(noPurpleNoChartreuse, () => {
 
     it("takes in a array and returns a array with no purple or chartreuse", () => {
       expect(noPurpleNoChartreuse(colors1)).toEqual(["yellow", "blue", "pink", "green"])
-      expect(noPurpleNoChartreuse(colors2)).toEqual(["saffron", "aquamarine", "periwinkle", "indigo", "ochre"])
+      expect(noPurpleNoChartreuse(colors2)).toEqual(expect.arrayContaining(expected))
     })
   })
 
 // b) Create the function that makes the test pass.
 
 // filter(function noPurpleNoChartreuse(element){/*"purple", "chartreuse"*/})
+
+// create a function that takes in a array of strings
+// create a empty array variable 
+// use a for loop to iterate through the array and push all values that are not purple or chartreuse in the new array
+// return new array
 
 function noPurpleNoChartreuse(l) {
     let newArr = [];
@@ -66,10 +71,19 @@ const nums2 = [109, 5, 9, 67, 8, 24]
 //     })
 //   })
 
-
+// create a function that takes in a array of integers
+// create a const that defines the smallest integer using the math.min method
+// create a const that defines the biggest integer using the math.max
+// return both values
 
 
 // b) Create the function that makes the test pass.
+
+function minMaxArray(nums){
+  const min = Math.min(...nums)
+  const max = Math.max(...nums)
+  return [min, max]
+}
 
 
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
@@ -90,6 +104,17 @@ describe(oneNoDups, () => {
 
 
 // b) Create the function that makes the test pass.
+
+// create a function that takes in arrays
+// sent a const that uses the Set method to iterate and keep only the new values
+// use .flat to return one array
+// return the one array 
+
+function oneNoDups(...arrs){
+  const noDuplicates = [...new Set(arrs.flat())]
+  return noDuplicates
+}
+
 
 
 // describe(noDoublesArray, () => {
